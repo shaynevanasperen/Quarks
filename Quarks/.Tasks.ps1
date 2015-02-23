@@ -2,6 +2,8 @@ Include-PluginScripts
 
 task SetVersion
 
+task Test
+
 task Pack Test, {
 	New-Item $buildsPath -Type directory -Force | Out-Null
 	Get-ChildItem $basePath\$projectName\*.nuspec -Recurse | %{ exec { & NuGet pack $_.FullName -OutputDirectory $buildsPath } }
