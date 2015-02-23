@@ -76,7 +76,7 @@
       <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Sessions">
-      <HintPath>..\packages\NHibernate.Sessions.1.0.0-pre1502222323\lib\net451\NHibernate.Sessions.dll</HintPath>
+      <HintPath>..\packages\NHibernate.Sessions.1.0.0-beta-1\lib\net451\NHibernate.Sessions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
