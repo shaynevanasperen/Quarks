@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.IEnumerableExtensions.OrderBy</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Extends the IEnumerable&lt;T&gt; interface to enable ordering by a dynamic property</description>
+		<language>en-US</language>
+		<tags>quarks ienumerable orderby dynamic property</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="OrderBy.cs" target="content\Quarks\IEnumerableExtensions" />
+	</files>
+</package>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.FluentNHibernate.Conventions.Reference.NotLazyLoad</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A reference convention which sets not lazy load</description>
+		<language>en-US</language>
+		<tags>quarks nhibernate fluentnhibernate convention reference not lazy load</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="NotLazyLoad.cs" target="content\Quarks\FluentNHibernate\Conventions\Reference" />
+	</files>
+</package>

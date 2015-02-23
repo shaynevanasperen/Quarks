@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.FluentNHibernate.Conventions.HasMany.BatchSize100</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A has many convention which sets batch size to 100</description>
+		<language>en-US</language>
+		<tags>quarks nhibernate fluentnhibernate convention has many batch size</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="BatchSize100.cs" target="content\Quarks\FluentNHibernate\Conventions\HasMany" />
+	</files>
+</package>

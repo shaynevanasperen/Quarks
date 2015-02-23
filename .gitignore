@@ -1,0 +1,10 @@
+[Oo]bj
+[Bb]in
+[Dd]ebug*
+*.user
+*.suo
+*.DS_Store
+[Tt]humbs.db
+NuGet.exe
+[Pp]ackages/
+builds/

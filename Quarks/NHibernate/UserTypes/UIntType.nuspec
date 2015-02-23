@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.NHibernate.UserTypes.UIntType</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>An IUserType for uint</description>
+		<language>en-US</language>
+		<tags>quarks nhibernate user type uint</tags>
+		<developmentDependency>true</developmentDependency>
+		<dependencies>
+			<dependency id="Quarks.NHibernate.UserTypes.ImmutableUserTypeBase" version="1.0.0-beta-1" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="UIntType.cs" target="content\Quarks\NHibernate\UserTypes" />
+	</files>
+</package>

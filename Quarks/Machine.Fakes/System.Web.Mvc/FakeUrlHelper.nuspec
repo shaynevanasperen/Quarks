@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.Machine.Fakes.System.Web.Mvc.FakeUrlHelper</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A fake implementation of UrlHelper</description>
+		<language>en-US</language>
+		<tags>quarks fake url helper</tags>
+		<developmentDependency>true</developmentDependency>
+		<dependencies>
+			<dependency id="Quarks.Machine.Fakes.System.Web.Mvc.FakeRequestContext" version="1.0.0-beta-1" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="FakeUrlHelper.cs" target="content\Quarks\Machine.Fakes\System.Web.Mvc" />
+	</files>
+</package>

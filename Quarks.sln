@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quarks", "Quarks\Quarks.csproj", "{355AD9F7-E743-4A12-A95D-2EFFCE3BF303}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{98C3F789-C54B-4C2C-BE4D-C966B4B8AE2E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quarks.Tests", "Quarks.Tests\Quarks.Tests.csproj", "{6B2E68EE-39FA-4058-8D3D-F25BCF345203}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notice", "notice", "{60003C9F-77AC-425F-BFBE-8B8304FDBD04}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{355AD9F7-E743-4A12-A95D-2EFFCE3BF303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355AD9F7-E743-4A12-A95D-2EFFCE3BF303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355AD9F7-E743-4A12-A95D-2EFFCE3BF303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355AD9F7-E743-4A12-A95D-2EFFCE3BF303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B2E68EE-39FA-4058-8D3D-F25BCF345203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B2E68EE-39FA-4058-8D3D-F25BCF345203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B2E68EE-39FA-4058-8D3D-F25BCF345203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B2E68EE-39FA-4058-8D3D-F25BCF345203}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

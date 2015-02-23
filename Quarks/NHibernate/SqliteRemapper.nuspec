@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.NHibernate.SqliteRemapper</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>
+			Utility class used for adjusting NHibernate mappings for options not supported by Sqlite.
+			See http://kozmic.pl/archive/2009/08/17/adjusting-nhibernate-mapping-for-tests.aspx.
+		</description>
+		<language>en-US</language>
+		<tags>quarks nhibernate sqlite map remap</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="SqliteRemapper.cs" target="content\Quarks\NHibernate" />
+	</files>
+</package>

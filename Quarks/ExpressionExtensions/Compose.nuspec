@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.ExpressionExtensions.Compose</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Expression tree extensions that helps to combine together filtering expression trees</description>
+		<language>en-US</language>
+		<tags>quarks expression compose and or andalso orelse</tags>
+		<developmentDependency>true</developmentDependency>
+		<dependencies>
+			<dependency id="Quarks.ExpressionVisitors.ParameterRebinderVisitor" version="1.0.0-beta-1" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="Compose.cs" target="content\Quarks\ExpressionExtensions" />
+	</files>
+</package>

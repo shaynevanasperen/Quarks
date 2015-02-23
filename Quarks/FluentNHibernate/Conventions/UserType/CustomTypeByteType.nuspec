@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.FluentNHibernate.Conventions.UserType.CustomTypeByteType</id>
+		<version>1.0.0-beta-1</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A user type convention which sets custom type to ByteType</description>
+		<language>en-US</language>
+		<tags>quarks nhibernate fluentnhibernate convention user type byte</tags>
+		<developmentDependency>true</developmentDependency>
+		<dependencies>
+			<dependency id="Quarks.NHibernate.UserTypes.ByteType" version="1.0.0-beta-1" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="CustomTypeByteType.cs" target="content\Quarks\FluentNHibernate\Conventions\UserType" />
+	</files>
+</package>

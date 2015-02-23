@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{355AD9F7-E743-4A12-A95D-2EFFCE3BF303}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quarks</RootNamespace>
+    <AssemblyName>Quarks</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Machine.Fakes">
+      <HintPath>..\packages\Machine.Fakes.2.5.0\lib\net40\Machine.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Fakes.Adapters.Moq">
+      <HintPath>..\packages\Machine.Fakes.Moq.2.5.0\lib\net40\Machine.Fakes.Adapters.Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications">
+      <HintPath>..\packages\Machine.Specifications.0.9.1\lib\net45\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Clr4">
+      <HintPath>..\packages\Machine.Specifications.0.9.1\lib\net45\Machine.Specifications.Clr4.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Should">
+      <HintPath>..\packages\Machine.Specifications.Should.0.7.2\lib\net45\Machine.Specifications.Should.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Sessions">
+      <HintPath>..\packages\NHibernate.Sessions.1.0.0-pre1502222323\lib\net451\NHibernate.Sessions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationAssembly.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="AssemblyExtensions\GetIsDebugBuild.cs" />
+    <Compile Include="AttributeHelper.cs" />
+    <Compile Include="DiagnosticsTextWriter.cs" />
+    <Compile Include="DynamicDictionary.cs" />
+    <Compile Include="EnumExtensions\GetAttributeOfType.cs" />
+    <Compile Include="ExpressionExtensions\Compose.cs" />
+    <Compile Include="ExpressionVisitors\MemberAccessPathVisitor.cs" />
+    <Compile Include="ExpressionVisitors\ParameterRebinderVisitor.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="FluentNHibernate\Conventions\AbbreviationAttribute.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Class\NotLazyLoad.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Class\SchemaDbo.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Class\Table.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Class\DynamicUpdate.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Class\DynamicInsert.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Class\CacheReadWrite.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasMany\BatchSize100.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasMany\KeyColumn.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasMany\NotKeyNullable.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasMany\NotKeyUpdate.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasMany\NotLazyLoad.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasOne\Constrained.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasOne\CascadeAll.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasOne\FetchJoin.cs" />
+    <Compile Include="FluentNHibernate\Conventions\HasOne\NotLazyLoad.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Hibernate\NotAutoImport.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Id\GeneratedByNative.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Id\Column.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Property\CustomTypeBinaryBlob.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Property\Column.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Proxy\EntityInterface.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Reference\ForeignKey.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Reference\FetchJoin.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Reference\NotLazyLoad.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Reference\Column.cs" />
+    <Compile Include="FluentNHibernate\Conventions\EscapeColumnName.cs" />
+    <Compile Include="FluentNHibernate\Conventions\GetTableName.cs" />
+    <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeByteType.cs" />
+    <Compile Include="FluentNHibernate\Conventions\UserType\CustomSqlTypeEnum.cs" />
+    <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeEnum.cs" />
+    <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeEnumerableOfStringType.cs" />
+    <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeNullableTimeType.cs" />
+    <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeUIntType.cs" />
+    <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeUShortType.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Version\MssqlVersioned.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Version\NhVersioned.cs" />
+    <Compile Include="FluentNHibernate\FilterableTypeSource.cs" />
+    <Compile Include="IdentityFieldProvider.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IEnumerableExtensions\Contains.cs" />
+    <Compile Include="IEnumerableExtensions\OrderBy.cs" />
+    <Compile Include="IEnumerableExtensions\Partition.cs" />
+    <Compile Include="IEnumerableExtensions\ForEach.cs" />
+    <Compile Include="Inflector.cs" />
+    <Compile Include="Machine.Fakes\AutoMapper\MappingContext.cs" />
+    <Compile Include="Machine.Fakes\AutoMapper\TypeConverterContext.cs" />
+    <Compile Include="Machine.Fakes\AutoMapper\ValueResolverContext.cs" />
+    <Compile Include="Machine.Fakes\ConfigForASystemTimeOf.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="FileStore.cs" />
+    <Compile Include="Machine.Fakes\System.Web.Mvc\ConfigForAFakeUrlHelper.cs" />
+    <Compile Include="Machine.Fakes\System.Web.Mvc\ConfigForAFakeUserAgent.cs" />
+    <Compile Include="Machine.Fakes\System.Web.Mvc\ConfigForAnAjaxRequest.cs" />
+    <Compile Include="Machine.Fakes\System.Web.Mvc\ConfigForAnHttpRequest.cs" />
+    <Compile Include="MemberName.cs" />
+    <Compile Include="NameValueCollectionExtensions\ToDictionary.cs" />
+    <Compile Include="NHibernate.Sessions\FluentNHibernate.cs" />
+    <Compile Include="NHibernate.Sessions\Types.cs" />
+    <Compile Include="NHibernate\ISessionExtensions\ConfigureAsReadOnly.cs" />
+    <Compile Include="NHibernate\ISessionExtensions\Transactionally.cs" />
+    <Compile Include="NHibernate\ISessionFactoryExtensions\GetCurrentOrNewSession.cs" />
+    <Compile Include="NHibernate\ISessionFactoryExtensions\HasCurrentSessionContext.cs" />
+    <Compile Include="NHibernate\SqliteInMemoryDriverConnectionProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NHibernate\SqliteRemapper.cs" />
+    <Compile Include="NHibernate\SqlTaggingInterceptor.cs" />
+    <Compile Include="NHibernate\UserTypes\ByteType.cs" />
+    <Compile Include="NHibernate\UserTypes\EnumerableOfStringType.cs" />
+    <Compile Include="NHibernate\UserTypes\ImmutableCompositeUserTypeBase.cs" />
+    <Compile Include="NHibernate\UserTypes\ImmutableUserTypeBase.cs" />
+    <Compile Include="NHibernate\UserTypes\NullableTimeType.cs" />
+    <Compile Include="NHibernate\UserTypes\UIntType.cs" />
+    <Compile Include="NHibernate\UserTypes\UShortType.cs" />
+    <Compile Include="Page.cs" />
+    <None Include="..\packages\PowerTasks.Plugins.Clean.1.0.0-beta-2\scripts\Clean.ps1">
+      <Link>.Tasks\Clean.ps1</Link>
+    </None>
+    <None Include="..\packages\PowerTasks.Plugins.Compile.1.0.0-beta-2\scripts\Compile.ps1">
+      <Link>.Tasks\Compile.ps1</Link>
+    </None>
+    <None Include="..\packages\PowerTasks.Plugins.Push.1.0.0-beta-2\scripts\Push.ps1">
+      <Link>.Tasks\Push.ps1</Link>
+    </None>
+    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0-beta-2\scripts\Test.ps1">
+      <Link>.Tasks\Test.ps1</Link>
+    </None>
+    <None Include="..\packages\PowerTasks.Plugins.Version.1.0.0-beta-2\scripts\Version.ps1">
+      <Link>.Tasks\Version.ps1</Link>
+    </None>
+    <None Include="DiagnosticsTextWriter.nuspec">
+      <DependentUpon>DiagnosticsTextWriter.cs</DependentUpon>
+    </None>
+    <None Include="DynamicDictionary.nuspec">
+      <DependentUpon>DynamicDictionary.cs</DependentUpon>
+    </None>
+    <None Include="AppSettings.nuspec">
+      <DependentUpon>AppSettings.cs</DependentUpon>
+    </None>
+    <None Include="EnumExtensions\GetAttributeOfType.nuspec">
+      <DependentUpon>GetAttributeOfType.cs</DependentUpon>
+    </None>
+    <None Include="ExpressionExtensions\Compose.nuspec">
+      <DependentUpon>Compose.cs</DependentUpon>
+    </None>
+    <None Include="ExpressionVisitors\ParameterRebinderVisitor.nuspec">
+      <DependentUpon>ParameterRebinderVisitor.cs</DependentUpon>
+    </None>
+    <None Include="ExpressionVisitors\MemberAccessPathVisitor.nuspec">
+      <DependentUpon>MemberAccessPathVisitor.cs</DependentUpon>
+    </None>
+    <None Include="Feature.nuspec">
+      <DependentUpon>Feature.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Class\NotLazyLoad.nuspec">
+      <DependentUpon>NotLazyLoad.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Class\SchemaDbo.nuspec">
+      <DependentUpon>SchemaDbo.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Class\Table.nuspec">
+      <DependentUpon>Table.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Class\DynamicUpdate.nuspec">
+      <DependentUpon>DynamicUpdate.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Class\DynamicInsert.nuspec">
+      <DependentUpon>DynamicInsert.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Class\CacheReadWrite.nuspec">
+      <DependentUpon>CacheReadWrite.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\AbbreviationAttribute.nuspec">
+      <DependentUpon>AbbreviationAttribute.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\EscapeColumnName.nuspec">
+      <DependentUpon>EscapeColumnName.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\GetTableName.nuspec">
+      <DependentUpon>GetTableName.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasMany\KeyColumn.nuspec">
+      <DependentUpon>KeyColumn.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasMany\NotKeyNullable.nuspec">
+      <DependentUpon>NotKeyNullable.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasMany\NotKeyUpdate.nuspec">
+      <DependentUpon>NotKeyUpdate.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasMany\NotLazyLoad.nuspec">
+      <DependentUpon>NotLazyLoad.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasMany\BatchSize100.nuspec">
+      <DependentUpon>BatchSize100.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasOne\CascadeAll.nuspec">
+      <DependentUpon>CascadeAll.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasOne\Constrained.nuspec">
+      <DependentUpon>Constrained.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasOne\FetchJoin.nuspec">
+      <DependentUpon>FetchJoin.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\HasOne\NotLazyLoad.nuspec">
+      <DependentUpon>NotLazyLoad.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Hibernate\NotAutoImport.nuspec">
+      <DependentUpon>NotAutoImport.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Id\Column.nuspec">
+      <DependentUpon>Column.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Id\GeneratedByNative.nuspec">
+      <DependentUpon>GeneratedByNative.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Property\CustomTypeBinaryBlob.nuspec">
+      <DependentUpon>CustomTypeBinaryBlob.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Property\Column.nuspec">
+      <DependentUpon>Column.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Proxy\EntityInterface.nuspec">
+      <DependentUpon>EntityInterface.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Reference\NotLazyLoad.nuspec">
+      <DependentUpon>NotLazyLoad.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Reference\ForeignKey.nuspec">
+      <DependentUpon>ForeignKey.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Reference\FetchJoin.nuspec">
+      <DependentUpon>FetchJoin.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Reference\Column.nuspec">
+      <DependentUpon>Column.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\UserType\CustomTypeUShortType.nuspec">
+      <DependentUpon>CustomTypeUShortType.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\UserType\CustomTypeUIntType.nuspec">
+      <DependentUpon>CustomTypeUIntType.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\UserType\CustomTypeNullableTimeType.nuspec">
+      <DependentUpon>CustomTypeNullableTimeType.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\UserType\CustomTypeEnumerableOfStringType.nuspec">
+      <DependentUpon>CustomTypeEnumerableOfStringType.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\UserType\CustomTypeEnum.nuspec">
+      <DependentUpon>CustomTypeEnum.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\UserType\CustomTypeByteType.nuspec">
+      <DependentUpon>CustomTypeByteType.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\UserType\CustomSqlTypeEnum.nuspec">
+      <DependentUpon>CustomSqlTypeEnum.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Version\MssqlVersioned.nuspec">
+      <DependentUpon>MssqlVersioned.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Version\NhVersioned.nuspec">
+      <DependentUpon>NhVersioned.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\FilterableTypeSource.nuspec">
+      <DependentUpon>FilterableTypeSource.cs</DependentUpon>
+    </None>
+    <None Include="IdentityFieldProvider.nuspec">
+      <DependentUpon>IdentityFieldProvider.cs</DependentUpon>
+    </None>
+    <None Include="IEntity.nuspec">
+      <DependentUpon>IEntity.cs</DependentUpon>
+    </None>
+    <None Include="IEnumerableExtensions\ForEach.nuspec">
+      <DependentUpon>ForEach.cs</DependentUpon>
+    </None>
+    <None Include="IEnumerableExtensions\OrderBy.nuspec">
+      <DependentUpon>OrderBy.cs</DependentUpon>
+    </None>
+    <None Include="IEnumerableExtensions\Partition.nuspec">
+      <DependentUpon>Partition.cs</DependentUpon>
+    </None>
+    <None Include="IEnumerableExtensions\Contains.nuspec">
+      <DependentUpon>Contains.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\AutoMapper\TypeConverterContext.nuspec">
+      <DependentUpon>TypeConverterContext.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\AutoMapper\ValueResolverContext.nuspec">
+      <DependentUpon>ValueResolverContext.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\System.Web.Mvc\ConfigForAnHttpRequest.nuspec">
+      <DependentUpon>ConfigForAnHttpRequest.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\System.Web.Mvc\ConfigForAnAjaxRequest.nuspec">
+      <DependentUpon>ConfigForAnAjaxRequest.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\System.Web.Mvc\ConfigForAFakeUserAgent.nuspec">
+      <DependentUpon>ConfigForAFakeUserAgent.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\System.Web.Mvc\ConfigForAFakeUrlHelper.nuspec">
+      <DependentUpon>ConfigForAFakeUrlHelper.cs</DependentUpon>
+    </None>
+    <None Include="MemberName.nuspec">
+      <DependentUpon>MemberName.cs</DependentUpon>
+    </None>
+    <None Include="NameValueCollectionExtensions\ToDictionary.nuspec">
+      <DependentUpon>ToDictionary.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate.Sessions\FluentNHibernate.nuspec">
+      <DependentUpon>FluentNHibernate.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate.Sessions\Types.nuspec">
+      <DependentUpon>Types.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\ISessionExtensions\ConfigureAsReadOnly.nuspec">
+      <DependentUpon>ConfigureAsReadOnly.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\ISessionExtensions\Transactionally.nuspec">
+      <DependentUpon>Transactionally.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\ISessionFactoryExtensions\GetCurrentOrNewSession.nuspec">
+      <DependentUpon>GetCurrentOrNewSession.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\ISessionFactoryExtensions\HasCurrentSessionContext.nuspec">
+      <DependentUpon>HasCurrentSessionContext.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\UserTypes\EnumerableOfStringType.nuspec">
+      <DependentUpon>EnumerableOfStringType.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\UserTypes\ImmutableCompositeUserTypeBase.nuspec">
+      <DependentUpon>ImmutableCompositeUserTypeBase.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\UserTypes\ImmutableUserTypeBase.nuspec">
+      <DependentUpon>ImmutableUserTypeBase.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\UserTypes\NullableTimeType.nuspec">
+      <DependentUpon>NullableTimeType.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\UserTypes\UIntType.nuspec">
+      <DependentUpon>UIntType.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\UserTypes\UShortType.nuspec">
+      <DependentUpon>UShortType.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\UserTypes\ByteType.nuspec">
+      <DependentUpon>ByteType.cs</DependentUpon>
+    </None>
+    <None Include="ObjectExtensions\ChangeTypeTo.nuspec">
+      <DependentUpon>ChangeTypeTo.cs</DependentUpon>
+    </None>
+    <None Include="StringExtensions\Contains.nuspec">
+      <DependentUpon>Contains.cs</DependentUpon>
+    </None>
+    <None Include="Switch.nuspec">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\System.Web.Mvc\FakeRequestContext.nuspec">
+      <DependentUpon>FakeRequestContext.cs</DependentUpon>
+    </None>
+    <None Include="Machine.Fakes\System.Web.Mvc\FakeUrlHelper.nuspec">
+      <DependentUpon>FakeUrlHelper.cs</DependentUpon>
+    </None>
+    <None Include="System.Web\FakeHttpResponse.nuspec">
+      <DependentUpon>FakeHttpResponse.cs</DependentUpon>
+    </None>
+    <None Include="TestRetrier.nuspec">
+      <DependentUpon>TestRetrier.cs</DependentUpon>
+    </None>
+    <None Include="Retrier.nuspec">
+      <DependentUpon>Retrier.cs</DependentUpon>
+    </None>
+    <None Include="SentenceSplitAndJoinExtension.nuspec">
+      <DependentUpon>SentenceSplitAndJoinExtension.cs</DependentUpon>
+    </None>
+    <None Include="Inflector.nuspec">
+      <DependentUpon>Inflector.cs</DependentUpon>
+    </None>
+    <None Include="Page.nuspec">
+      <DependentUpon>Page.cs</DependentUpon>
+    </None>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Retrier.cs" />
+    <Compile Include="SentenceSplitAndJoinExtension.cs" />
+    <Compile Include="StringExtensions\Contains.cs" />
+    <Compile Include="Switch.cs" />
+    <Compile Include="Machine.Fakes\System.Web.Mvc\FakeRequestContext.cs" />
+    <Compile Include="Machine.Fakes\System.Web.Mvc\FakeUrlHelper.cs" />
+    <Compile Include="System.Web\FakeHttpResponse.cs" />
+    <Compile Include="SystemTime.cs" />
+    <Compile Include="AssemblyExtensions\GetExecutionFolder.cs" />
+    <Compile Include="AssemblyExtensions\GetVersion.cs" />
+    <Compile Include="TestRetrier.cs" />
+    <Compile Include="ObjectExtensions\ChangeTypeTo.cs" />
+    <Compile Include="TypeExtensions\InheritsOrImplements.cs" />
+    <Compile Include="TypeExtensions\InvokeGenericMethod.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".Tasks.ps1" />
+    <None Include="FileStore.nuspec">
+      <DependentUpon>FileStore.cs</DependentUpon>
+    </None>
+    <None Include="AttributeHelper.nuspec">
+      <DependentUpon>AttributeHelper.cs</DependentUpon>
+    </None>
+    <None Include="ApplicationAssembly.nuspec">
+      <DependentUpon>ApplicationAssembly.cs</DependentUpon>
+    </None>
+    <None Include="AssemblyExtensions\GetIsDebugBuild.nuspec">
+      <DependentUpon>GetIsDebugBuild.cs</DependentUpon>
+    </None>
+    <None Include="Disposable.nuspec">
+      <DependentUpon>Disposable.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\SqliteInMemoryDriverConnectionProvider.nuspec">
+      <DependentUpon>SqliteInMemoryDriverConnectionProvider.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\SqliteRemapper.nuspec">
+      <DependentUpon>SqliteRemapper.cs</DependentUpon>
+    </None>
+    <None Include="NHibernate\SqlTaggingInterceptor.nuspec">
+      <DependentUpon>SqlTaggingInterceptor.cs</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Machine.Fakes\ConfigForASystemTimeOf.nuspec">
+      <DependentUpon>ConfigForASystemTimeOf.cs</DependentUpon>
+    </None>
+    <None Include="SystemTime.nuspec">
+      <DependentUpon>SystemTime.cs</DependentUpon>
+    </None>
+    <None Include="AssemblyExtensions\GetExecutionFolder.nuspec">
+      <DependentUpon>GetExecutionFolder.cs</DependentUpon>
+    </None>
+    <None Include="AssemblyExtensions\GetVersion.nuspec">
+      <DependentUpon>GetVersion.cs</DependentUpon>
+    </None>
+    <None Include="TypeExtensions\InvokeGenericMethod.nuspec">
+      <DependentUpon>InvokeGenericMethod.cs</DependentUpon>
+    </None>
+    <None Include="TypeExtensions\InheritsOrImplements.nuspec">
+      <DependentUpon>InheritsOrImplements.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Machine.Fakes\AutoMapper\MappingContext.nuspec">
+      <DependentUpon>MappingContext.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0-beta-2\scripts\specflow_report_template.html">
+      <Link>.Tasks\specflow_report_template.html</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
