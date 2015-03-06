@@ -7,9 +7,9 @@ namespace Quarks.NHibernate.Sessions
 {
 	static class BeginConfigurationExtension
 	{
-		internal static IPartialConfiguration Using(this IBeginConfiguration extended, Action<SessionFactoryFluentConfiguration> configuration)
+		internal static IPartialConfiguration UsingFluentConfiguration(this IBeginConfiguration extended, Action<SessionFactoryFluentConfiguration> configuration)
 		{
-			return extended.Using(x =>
+			return extended.UsingConfigurationFactory(x =>
 			{
 				var fluentConfiguration = Fluently.Configure(new Configuration());
 				configuration(new SessionFactoryFluentConfiguration
