@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.ImageDiff.ImageDiffTool</id>
+		<version>1.0.0</version>
+		<authors>Ryan Cosans</authors>
+		<owners>No One</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Allows the comparing of images at pixel level and the creation of difference images.</description>
+		<language>en-US</language>
+		<tags>quarks image diff</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="ApplicationAssembly.cs" target="content\Quarks\ImageDiff" />
+	</files>
+</package>
