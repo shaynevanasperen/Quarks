@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
@@ -82,6 +84,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -165,6 +168,7 @@
     <Compile Include="IEnumerableExtensions\OrderBy.cs" />
     <Compile Include="IEnumerableExtensions\Partition.cs" />
     <Compile Include="IEnumerableExtensions\ForEach.cs" />
+    <Compile Include="ImageDiff\ImageDiff.cs" />
     <Compile Include="Inflector.cs" />
     <Compile Include="Machine.Fakes\AutoMapper\MappingContext.cs" />
     <Compile Include="Machine.Fakes\AutoMapper\TypeConverterContext.cs" />
@@ -211,6 +215,9 @@
     </None>
     <None Include="..\packages\PowerTasks.Plugins.Version.1.0.0-beta-2\scripts\Version.ps1">
       <Link>.Tasks\Version.ps1</Link>
+    </None>
+    <None Include="ApplicationAssembly.nuspec">
+      <DependentUpon>ApplicationAssembly.cs</DependentUpon>
     </None>
     <None Include="DiagnosticsTextWriter.nuspec">
       <DependentUpon>DiagnosticsTextWriter.cs</DependentUpon>
@@ -368,6 +375,7 @@
     <None Include="IEnumerableExtensions\Contains.nuspec">
       <DependentUpon>Contains.cs</DependentUpon>
     </None>
+    <None Include="ImageDiff\ImageDiff.nuspec" />
     <None Include="Machine.Fakes\AutoMapper\TypeConverterContext.nuspec">
       <DependentUpon>TypeConverterContext.cs</DependentUpon>
     </None>
@@ -487,9 +495,6 @@
     </None>
     <None Include="AttributeHelper.nuspec">
       <DependentUpon>AttributeHelper.cs</DependentUpon>
-    </None>
-    <None Include="ApplicationAssembly.nuspec">
-      <DependentUpon>ApplicationAssembly.cs</DependentUpon>
     </None>
     <None Include="AssemblyExtensions\GetIsDebugBuild.nuspec">
       <DependentUpon>GetIsDebugBuild.cs</DependentUpon>
