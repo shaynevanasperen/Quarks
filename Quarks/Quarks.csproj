@@ -36,8 +36,9 @@
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Core">
-      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Windsor">
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
@@ -69,8 +70,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    <Reference Include="Moq, Version=4.2.1502.911, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
@@ -197,21 +199,22 @@
     <Compile Include="NHibernate\UserTypes\UIntType.cs" />
     <Compile Include="NHibernate\UserTypes\UShortType.cs" />
     <Compile Include="Page.cs" />
-    <None Include="..\packages\PowerTasks.Plugins.Clean.1.0.0-beta-2\scripts\Clean.ps1">
+    <None Include="..\packages\PowerTasks.Plugins.Clean.1.0.0\scripts\Clean.ps1">
       <Link>.Tasks\Clean.ps1</Link>
     </None>
-    <None Include="..\packages\PowerTasks.Plugins.Compile.1.0.0-beta-2\scripts\Compile.ps1">
+    <None Include="..\packages\PowerTasks.Plugins.Compile.1.0.0\scripts\Compile.ps1">
       <Link>.Tasks\Compile.ps1</Link>
     </None>
-    <None Include="..\packages\PowerTasks.Plugins.Push.1.0.0-beta-2\scripts\Push.ps1">
+    <None Include="..\packages\PowerTasks.Plugins.Push.1.0.0\scripts\Push.ps1">
       <Link>.Tasks\Push.ps1</Link>
     </None>
-    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0-beta-2\scripts\Test.ps1">
+    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0\scripts\Test.ps1">
       <Link>.Tasks\Test.ps1</Link>
     </None>
-    <None Include="..\packages\PowerTasks.Plugins.Version.1.0.0-beta-2\scripts\Version.ps1">
+    <None Include="..\packages\PowerTasks.Plugins.Version.1.0.0\scripts\Version.ps1">
       <Link>.Tasks\Version.ps1</Link>
     </None>
+    <None Include="app.config" />
     <None Include="DiagnosticsTextWriter.nuspec">
       <DependentUpon>DiagnosticsTextWriter.cs</DependentUpon>
     </None>
@@ -532,7 +535,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0-beta-2\scripts\specflow_report_template.html">
+    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0\scripts\specflow_report_template.html">
       <Link>.Tasks\specflow_report_template.html</Link>
     </None>
   </ItemGroup>

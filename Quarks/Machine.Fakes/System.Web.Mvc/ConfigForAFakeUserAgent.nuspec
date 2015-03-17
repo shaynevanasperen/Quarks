@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>Quarks.Machine.Fakes.System.Web.Mvc.ConfigForAFakeUserAgent</id>
-		<version>1.0.0-beta-1</version>
+		<version>1.0.0</version>
 		<authors>Shayne van Asperen</authors>
 		<owners>Shayne van Asperen</owners>
 		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
