@@ -19,7 +19,7 @@ namespace Quarks.Machine.Fakes
 		{
 			SystemTime.Now = _fakeTime;
 			SystemTime.UtcNow = _fakeTime;
-			SystemTime.Today = _fakeTime;
+			SystemTime.Today = _fakeTime.Date;
 		};
 
 		OnCleanup after = ctx => SystemTime.Reset();
