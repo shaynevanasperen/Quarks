@@ -42,8 +42,8 @@ namespace Quarks.NHibernate
 			var methodName = getCurrentFullyQualifiedTaggingMethodName(stackTrace, out foundAtFrameIndex);
 
 			return string.Format(CultureInfo.InvariantCulture,
-				"/* NHibernate [Method: {0}]{1} (Resolved in {2}ms) */",
-				methodName, GetAdditionalTags(stackTrace, foundAtFrameIndex), stopWatch.Elapsed.TotalMilliseconds);
+				"/* NHibernate [Method: {0}]{1} (Resolved in {2}ms) */{3}",
+				methodName, GetAdditionalTags(stackTrace, foundAtFrameIndex), stopWatch.Elapsed.TotalMilliseconds, Environment.NewLine);
 		}
 
 		string getCurrentFullyQualifiedTaggingMethodName(StackTrace stackTrace, out int foundAtFrameIndex)
