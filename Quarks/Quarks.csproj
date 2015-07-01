@@ -121,6 +121,7 @@
     <Compile Include="ExpressionExtensions\Compose.cs" />
     <Compile Include="ExpressionVisitors\MemberAccessPathVisitor.cs" />
     <Compile Include="ExpressionVisitors\ParameterRebinderVisitor.cs" />
+    <Compile Include="AssertComparer.cs" />
     <Compile Include="Feature.cs" />
     <Compile Include="FluentNHibernate\Conventions\AbbreviationAttribute.cs" />
     <Compile Include="FluentNHibernate\Conventions\Class\NotLazyLoad.cs" />
@@ -160,6 +161,8 @@
     <Compile Include="FluentNHibernate\Conventions\Version\MssqlVersioned.cs" />
     <Compile Include="FluentNHibernate\Conventions\Version\NhVersioned.cs" />
     <Compile Include="FluentNHibernate\FilterableTypeSource.cs" />
+    <Compile Include="GenericExtensions\QuasiEquals.cs" />
+    <Compile Include="GenericExtensions\IsEqualToDefault.cs" />
     <Compile Include="IdentityFieldProvider.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="IEnumerableExtensions\Contains.cs" />
@@ -197,6 +200,28 @@
     <Compile Include="NHibernate\UserTypes\NullableTimeType.cs" />
     <Compile Include="NHibernate\UserTypes\UIntType.cs" />
     <Compile Include="NHibernate\UserTypes\UShortType.cs" />
+    <Compile Include="TypeExtensions\IsNullable.cs" />
+    <None Include="AssertComparer.nuspec">
+      <DependentUpon>AssertComparer.cs</DependentUpon>
+    </None>
+    <None Include="GenericExtensions\QuasiEquals.nuspec">
+      <DependentUpon>QuasiEquals.cs</DependentUpon>
+    </None>
+    <None Include="GenericExtensions\IsEqualToDefault.nuspec">
+      <DependentUpon>IsEqualToDefault.cs</DependentUpon>
+    </None>
+    <None Include="ObjectExtensions\CanBeRepresentedAsString.nuspec">
+      <DependentUpon>CanBeRepresentedAsString.cs</DependentUpon>
+    </None>
+    <None Include="ObjectExtensions\ToEnumerable.nuspec">
+      <DependentUpon>ToEnumerable.cs</DependentUpon>
+    </None>
+    <None Include="ObjectExtensions\Flatten.nuspec">
+      <DependentUpon>Flatten.cs</DependentUpon>
+    </None>
+    <Compile Include="ObjectExtensions\CanBeRepresentedAsString.cs" />
+    <Compile Include="ObjectExtensions\ToEnumerable.cs" />
+    <Compile Include="ObjectExtensions\Flatten.cs" />
     <Compile Include="Page.cs" />
     <None Include="..\packages\PowerTasks.Plugins.Clean.1.0.0\scripts\Clean.ps1">
       <Link>.Tasks\Clean.ps1</Link>
@@ -520,6 +545,9 @@
     </None>
     <None Include="AssemblyExtensions\GetVersion.nuspec">
       <DependentUpon>GetVersion.cs</DependentUpon>
+    </None>
+    <None Include="TypeExtensions\IsNullable.nuspec">
+      <DependentUpon>IsNullable.cs</DependentUpon>
     </None>
     <None Include="TypeExtensions\InvokeGenericMethod.nuspec">
       <DependentUpon>InvokeGenericMethod.cs</DependentUpon>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.ObjectExtensions.Flatten</id>
+		<version>1.0.0</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>An extension for representing a deep object graph as a flat series of values</description>
+		<language>en-US</language>
+		<tags>quarks object extension enumerable properties flatten</tags>
+		<developmentDependency>true</developmentDependency>
+		<dependencies>
+			<dependency id="Quarks.ObjectExtensions.CanBeRepresentedAsString" version="1.0.0" />
+			<dependency id="Quarks.ObjectExtensions.ToEnumerable" version="1.0.0" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="Flatten.cs" target="content\Quarks\ObjectExtensions" />
+	</files>
+</package>
