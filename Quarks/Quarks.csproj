@@ -200,6 +200,7 @@
     <Compile Include="NHibernate\UserTypes\NullableTimeType.cs" />
     <Compile Include="NHibernate\UserTypes\UIntType.cs" />
     <Compile Include="NHibernate\UserTypes\UShortType.cs" />
+    <Compile Include="SystemTimeOffset.cs" />
     <Compile Include="TypeExtensions\IsNullable.cs" />
     <None Include="..\packages\PowerTasks.Plugins.Clean.2.0.0\scripts\Clean.ps1">
       <Link>.Tasks\Clean.ps1</Link>
@@ -472,6 +473,9 @@
     </None>
     <None Include="System.Web\FakeHttpResponse.nuspec">
       <DependentUpon>FakeHttpResponse.cs</DependentUpon>
+    </None>
+    <None Include="SystemTimeOffset.nuspec">
+      <DependentUpon>SystemTimeOffset.cs</DependentUpon>
     </None>
     <None Include="TestRetrier.nuspec">
       <DependentUpon>TestRetrier.cs</DependentUpon>
