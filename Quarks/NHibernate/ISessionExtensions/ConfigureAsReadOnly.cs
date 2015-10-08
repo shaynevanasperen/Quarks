@@ -2,7 +2,7 @@
 
 namespace Quarks.NHibernate.ISessionExtensions
 {
-	static partial class Session
+	static partial class SessionExtension
 	{
 		internal static void ConfigureAsReadOnly(this ISession session)
 		{
