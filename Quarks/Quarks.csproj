@@ -201,6 +201,18 @@
     <Compile Include="NHibernate\UserTypes\UIntType.cs" />
     <Compile Include="NHibernate\UserTypes\UShortType.cs" />
     <Compile Include="TypeExtensions\IsNullable.cs" />
+    <None Include="..\packages\PowerTasks.Plugins.Clean.2.0.0\scripts\Clean.ps1">
+      <Link>.Tasks\Clean.ps1</Link>
+    </None>
+    <None Include="..\packages\PowerTasks.Plugins.Compile.2.0.0\scripts\Compile.ps1">
+      <Link>.Tasks\Compile.ps1</Link>
+    </None>
+    <None Include="..\packages\PowerTasks.Plugins.Push.2.0.0\scripts\Push.ps1">
+      <Link>.Tasks\Push.ps1</Link>
+    </None>
+    <None Include="..\packages\PowerTasks.Plugins.Test.2.0.0\scripts\Test.ps1">
+      <Link>.Tasks\Test.ps1</Link>
+    </None>
     <None Include="AssertComparer.nuspec">
       <DependentUpon>AssertComparer.cs</DependentUpon>
     </None>
@@ -223,21 +235,6 @@
     <Compile Include="ObjectExtensions\ToEnumerable.cs" />
     <Compile Include="ObjectExtensions\Flatten.cs" />
     <Compile Include="Page.cs" />
-    <None Include="..\packages\PowerTasks.Plugins.Clean.1.0.0\scripts\Clean.ps1">
-      <Link>.Tasks\Clean.ps1</Link>
-    </None>
-    <None Include="..\packages\PowerTasks.Plugins.Compile.1.0.0\scripts\Compile.ps1">
-      <Link>.Tasks\Compile.ps1</Link>
-    </None>
-    <None Include="..\packages\PowerTasks.Plugins.Push.1.0.0\scripts\Push.ps1">
-      <Link>.Tasks\Push.ps1</Link>
-    </None>
-    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0\scripts\Test.ps1">
-      <Link>.Tasks\Test.ps1</Link>
-    </None>
-    <None Include="..\packages\PowerTasks.Plugins.Version.1.0.0\scripts\Version.ps1">
-      <Link>.Tasks\Version.ps1</Link>
-    </None>
     <None Include="app.config" />
     <None Include="DiagnosticsTextWriter.nuspec">
       <DependentUpon>DiagnosticsTextWriter.cs</DependentUpon>
@@ -562,7 +559,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\packages\PowerTasks.Plugins.Test.1.0.0\scripts\specflow_report_template.html">
+    <None Include="..\packages\PowerTasks.Plugins.Test.2.0.0\scripts\specflow_report_template.html">
       <Link>.Tasks\specflow_report_template.html</Link>
     </None>
   </ItemGroup>
