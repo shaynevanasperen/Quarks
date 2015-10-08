@@ -55,11 +55,6 @@ namespace Quarks.FluentNHibernate
 			return true;
 		}
 
-		public ITypeSource FromApplicationAssembly()
-		{
-			return FromTypeSource(new AssemblyTypeSource(ApplicationAssembly.Instance));
-		}
-
 		public ITypeSource FromAssemblies(params Assembly[] assemblies)
 		{
 			if (assemblies == null) throw new ArgumentNullException("assemblies");
@@ -81,18 +76,12 @@ namespace Quarks.FluentNHibernate
 
 	interface ITypeFilter
 	{
-		ITypeSource FromApplicationAssembly();
 		ITypeSource FromAssemblies(params Assembly[] assemblies);
 		ITypeSource FromTypeSource(ITypeSource typeSource);
 	}
 
 	static partial class Types
 	{
-		internal static IFilterableTypeSource FromApplicationAssembly()
-		{
-			return FromTypeSource(new AssemblyTypeSource(ApplicationAssembly.Instance));
-		}
-
 		internal static IFilterableTypeSource FromAssemblies(params Assembly[] assemblies)
 		{
 			if (assemblies == null) throw new ArgumentNullException("assemblies");
