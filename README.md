@@ -1,4 +1,6 @@
-# Quarks
+[![Build status](https://ci.appveyor.com/api/projects/status/hqd84ecsmds7l0cx?svg=true)](https://ci.appveyor.com/project/shaynevanasperen/quarks)
+Quarks
+======
 
 A collection of source-only [NuGet packages](https://www.nuget.org/packages?q=quarks) representing
 tiny bits of functionality that don't belong together in a monolithic "utility" library. These are
@@ -58,20 +60,23 @@ in the "Quarks.Machine.Fakes" namespace.
 
 * If the package is an extension method, the package ID should be prefixed with "Quarks", followed
 by the target type you are extending (with an "Extensions" suffix added), followed by the name of the
-extension method. For example, "Quarks.StringExtensions.Contains" extends System.String with a method
-name "Contains". If the type you are extending is in the root "System" namespace, you can omit the
+extension method. For example, "Quarks.StringExtensions.Contains" extends `System.String` with a method
+named `Contains`. If the type you are extending is in the root `System` namespace, you can omit the
 "System" part in the package ID. For the class that contains your extension method, it should be
 named in the singular and defined as partial, so for "Quarks.StringExtensions.Contains", the class
-is defined as `static partial class StringExtension`. This allows other extension method packages
+is defined as `static partial class StringExtension`. If the extension method is extending an
+interface rather than a class, the same rule applies except that you drop the `I` prefix from your
+extension method class, so for "Quarks.IEnumerableExtensions.Contains", the class is defined as
+`static partial class EnumerableExtension`. This allows other extension method packages
 for the same type to share the same class name for consistency and ease of discovery.
 
 * Pick a name that is very specific to the helper/extension method you're creating. For example,
 instead of "Quarks.StringExtensions" containing two or more extension methods, create a
 "Quarks.StringExtensions.SomeMethod" package for each extension method individually. This rule
-minimizes the chances of a single package becoming too big and evolving into its own Common.cs hell.
+minimizes the chances of a single package becoming too big and evolving into its own "Common.cs" hell.
 
-* Each Quarks package is contained in a single .cs file, with the corresponding .nuspec file having the
-same name and nested beneath it using the &lt;DependentUpon&gt; syntax in the .csproj file. A useful
+* Each Quarks package is contained in a single `.cs` file, with the corresponding `.nuspec` file having the
+same name and nested beneath it using the `<DependentUpon>` syntax in the `.csproj` file. A useful
 Visual Studio extension called [File Nesting](https://visualstudiogallery.msdn.microsoft.com/3ebde8fb-26d8-4374-a0eb-1e4e2665070c)
 makes this easy to do. The .nupsec file should specify that the package is a [development dependency](https://docs.nuget.org/release-notes/nuget-2.8#development-dependencies)
 in the metadata, and the target of the file should be a folder that matches the namespace of the package.
@@ -80,24 +85,24 @@ in the metadata, and the target of the file should be a folder that matches the 
 packages, be they other Quarks packages or other source-only packages (or even build-time tools etc.).
 It's okay to have code in a Quarks package that depends on another NuGet package that is not a
 [development dependency](https://docs.nuget.org/release-notes/nuget-2.8#development-dependencies), but
-in that case it should just omit that dependency in the .nuspec file. The reason for this is that the
+in that case it should just omit that dependency in the `.nuspec` file. The reason for this is that the
 consumer of the Quarks package would necessarily already depend on a version of that dependent package
 which is being extended, thus allowing ultimate flexibility regarding versioning.
 
-* Types and methods in Quarks packages should be marked as internal in order to not pollute the target
+* Types and methods in Quarks packages should be marked as `internal` in order to not pollute the target
 code's public API.
 
 ## When to create a Quarks package
 There are plenty of situations where a Quarks package does not make sense. Here's a few things
 to consider:
 
-* **DO** consider creating a Quarks package for "utility" libraries that feature heavy usage of static
+* **TENTATIVELY** consider creating a Quarks package for "utility" libraries that feature heavy usage of static
 and/or extension methods. Examples of these types of utility libraries include unit test assertion
 libraries and the popular [DataAnnotationsExtensions](https://www.nuget.org/packages/DataAnnotationsExtensions/)
 package. _However, the idea behind Quarks is best suited to individual classes or methods rather than
 full featured libraries._
 
-* **DO** consider creating a Quarks package for small single purpose libraries. [SimpleJson](https://www.nuget.org/packages/SimpleJson/)
+* **TENTATIVELY** consider creating a Quarks package for small single purpose libraries. [SimpleJson](https://www.nuget.org/packages/SimpleJson/)
 is already doing this (though not in the Quarks namespace and not following these conventions) but
 you can imagine any code appropriate for a blog post or Gist would fit the definition well. _However,
 the idea behind Quarks is best suited to individual classes or methods rather than full featured
@@ -115,3 +120,16 @@ when the package was installed. These modifications will persist when a NuGet pa
 happens, but when updating the package these changes will be overwritten (after accepting a prompt
 to do so). In that case, a user can then merge their changes into the new code (if they are still
 relevant).
+
+## NuGet 3.1 deprecated support for delivering elements in the `/content` folder of packages
+Starting with NuGet 3.1 when using `project.json`, [support for delivering elements in the /content folder of packages has been deprecated](http://blog.nuget.org/20150729/Introducing-nuget-uwp.html).
+Unfortunately this means that currently, Quarks packages won't work out-of-the-box for projects based
+on the new `project.json` format. However according to [this blog post](https://docs.nuget.org/Consume/ProjectJson-Intro),
+"Content files can still be carried inside the packages, and will be ignored currently, however the end
+user can still copy them into the right spot.", so this method can be used as a temporary measure for
+projects based on the new `project.json` format.
+
+There's an [issue](https://github.com/NuGet/Home/issues/627) currently being discussed that proposes
+to bring back support for content files. I'll be watching this issue closely to see if and when it
+gets implemented. If however it doesn't get implemented, I'll be looking into migrating this suite of
+packages to [Bower](http://bower.io/).
