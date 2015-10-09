@@ -10,29 +10,30 @@ namespace Quarks.FluentNHibernate
 	class FilterableTypeSource : IFilterableTypeSource, ITypeFilter
 	{
 		ITypeSource _innerTypeSource;
-		Func<Type, bool> _predicate;
+		readonly Func<Type, bool> _predicate;
 
-		FilterableTypeSource() { }
+		FilterableTypeSource(Func<Type, bool> predicate)
+		{
+			_predicate = predicate ?? anyType;
+		}
 
-		internal FilterableTypeSource(ITypeSource innerTypeSource)
+		internal FilterableTypeSource(ITypeSource innerTypeSource, Func<Type, bool> predicate = null) : this(predicate)
 		{
 			if (innerTypeSource == null) throw new ArgumentNullException("innerTypeSource");
 
 			_innerTypeSource = innerTypeSource;
-			_predicate = anyType;
 		}
 
 		internal static ITypeFilter CreateTypeFilter(Func<Type, bool> predicate)
 		{
 			if (predicate == null) throw new ArgumentNullException("predicate");
 
-			return new FilterableTypeSource { _predicate = predicate };
+			return new FilterableTypeSource(predicate);
 		}
 
 		public ITypeSource Where(Func<Type, bool> predicate)
 		{
-			_predicate = predicate;
-			return this;
+			return new FilterableTypeSource(this, predicate);
 		}
 
 		public string GetIdentifier()
@@ -55,13 +56,13 @@ namespace Quarks.FluentNHibernate
 			return true;
 		}
 
-		public ITypeSource FromAssemblies(params Assembly[] assemblies)
+		public IFilterableTypeSource FromAssemblies(params Assembly[] assemblies)
 		{
 			if (assemblies == null) throw new ArgumentNullException("assemblies");
 			return FromTypeSource(new CombinedAssemblyTypeSource(assemblies));
 		}
 
-		public ITypeSource FromTypeSource(ITypeSource typeSource)
+		public IFilterableTypeSource FromTypeSource(ITypeSource typeSource)
 		{
 			if (typeSource == null) throw new ArgumentNullException("typeSource");
 			_innerTypeSource = typeSource;
@@ -76,8 +77,8 @@ namespace Quarks.FluentNHibernate
 
 	interface ITypeFilter
 	{
-		ITypeSource FromAssemblies(params Assembly[] assemblies);
-		ITypeSource FromTypeSource(ITypeSource typeSource);
+		IFilterableTypeSource FromAssemblies(params Assembly[] assemblies);
+		IFilterableTypeSource FromTypeSource(ITypeSource typeSource);
 	}
 
 	static partial class Types

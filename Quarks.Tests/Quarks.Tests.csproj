@@ -105,6 +105,7 @@
     <Compile Include="IdentityFieldProviderTests.cs" />
     <Compile Include="InflectorTests.cs" />
     <Compile Include="MemberNameTests.cs" />
+    <Compile Include="FluentNHibernate\FilterableTypeSourceTests.cs" />
     <Compile Include="NHibernate\UserTypes\EnumerableOfStringTypeTests.cs" />
     <Compile Include="OrdinalizeTests.cs">
       <DependentUpon>InflectorTests.cs</DependentUpon>
