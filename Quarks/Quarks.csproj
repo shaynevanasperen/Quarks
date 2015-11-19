@@ -81,6 +81,7 @@
       <HintPath>..\packages\NHibernate.Sessions.1.0.0\lib\net451\NHibernate.Sessions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
@@ -140,10 +141,13 @@
     <Compile Include="FluentNHibernate\Conventions\HasOne\FetchJoin.cs" />
     <Compile Include="FluentNHibernate\Conventions\HasOne\NotLazyLoad.cs" />
     <Compile Include="FluentNHibernate\Conventions\Hibernate\NotAutoImport.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Id\GeneratedByAssigned.cs" />
     <Compile Include="FluentNHibernate\Conventions\Id\GeneratedByNative.cs" />
     <Compile Include="FluentNHibernate\Conventions\Id\Column.cs" />
     <Compile Include="FluentNHibernate\Conventions\Property\CustomTypeBinaryBlob.cs" />
     <Compile Include="FluentNHibernate\Conventions\Property\Column.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Property\NotNullable.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Property\StringLength.cs" />
     <Compile Include="FluentNHibernate\Conventions\Proxy\EntityInterface.cs" />
     <Compile Include="FluentNHibernate\Conventions\Reference\ForeignKey.cs" />
     <Compile Include="FluentNHibernate\Conventions\Reference\FetchJoin.cs" />
@@ -151,6 +155,7 @@
     <Compile Include="FluentNHibernate\Conventions\Reference\Column.cs" />
     <Compile Include="FluentNHibernate\Conventions\EscapeColumnName.cs" />
     <Compile Include="FluentNHibernate\Conventions\GetTableName.cs" />
+    <Compile Include="FluentNHibernate\Conventions\Reference\NotNullable.cs" />
     <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeByteType.cs" />
     <Compile Include="FluentNHibernate\Conventions\UserType\CustomSqlTypeEnum.cs" />
     <Compile Include="FluentNHibernate\Conventions\UserType\CustomTypeEnum.cs" />
@@ -218,6 +223,18 @@
     </None>
     <None Include="AssertComparer.nuspec">
       <DependentUpon>AssertComparer.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Id\GeneratedByAssigned.nuspec">
+      <DependentUpon>GeneratedByAssigned.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Property\NotNullable.nuspec">
+      <DependentUpon>NotNullable.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Property\StringLength.nuspec">
+      <DependentUpon>StringLength.cs</DependentUpon>
+    </None>
+    <None Include="FluentNHibernate\Conventions\Reference\NotNullable.nuspec">
+      <DependentUpon>NotNullable.cs</DependentUpon>
     </None>
     <None Include="GenericExtensions\QuasiEquals.nuspec">
       <DependentUpon>QuasiEquals.cs</DependentUpon>
