@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.IDictionaryExtensions.AddOrUpdate</id>
+		<version>1.0.0</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Extends the IDictionary&lt;TKey, TValue&gt; interface to include a AddOrUpdate method</description>
+		<language>en-US</language>
+		<tags>quarks idictionary add update addorupdate</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="AddOrUpdate.cs" target="content\Quarks\IDictionaryExtensions" />
+	</files>
+</package>

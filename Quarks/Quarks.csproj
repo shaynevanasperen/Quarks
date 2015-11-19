@@ -164,6 +164,8 @@
     <Compile Include="GenericExtensions\QuasiEquals.cs" />
     <Compile Include="GenericExtensions\IsEqualToDefault.cs" />
     <Compile Include="IdentityFieldProvider.cs" />
+    <Compile Include="IDictionaryExtensions\AddOrUpdate.cs" />
+    <Compile Include="IDictionaryExtensions\GetValueOrDefault.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="IEnumerableExtensions\Contains.cs" />
     <Compile Include="IEnumerableExtensions\OrderBy.cs" />
@@ -222,6 +224,12 @@
     </None>
     <None Include="GenericExtensions\IsEqualToDefault.nuspec">
       <DependentUpon>IsEqualToDefault.cs</DependentUpon>
+    </None>
+    <None Include="IDictionaryExtensions\AddOrUpdate.nuspec">
+      <DependentUpon>AddOrUpdate.cs</DependentUpon>
+    </None>
+    <None Include="IDictionaryExtensions\GetValueOrDefault.nuspec">
+      <DependentUpon>GetValueOrDefault.cs</DependentUpon>
     </None>
     <None Include="ObjectExtensions\CanBeRepresentedAsString.nuspec">
       <DependentUpon>CanBeRepresentedAsString.cs</DependentUpon>
