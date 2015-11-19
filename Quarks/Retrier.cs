@@ -20,16 +20,16 @@ namespace Quarks
 		{
 			await DoAsync<object>(async () =>
 			{
-				await action();
+				await action().ConfigureAwait(false);
 				return null;
-			}, retryInterval, retryCount);
+			}, retryInterval, retryCount).ConfigureAwait(false);
 		}
 
 		public virtual T Do<T>(Func<T> action, TimeSpan retryInterval, int retryCount = 3)
 		{
 			var exceptions = new List<Exception>();
 
-			for (var retry = 0; retry < retryCount; retry++)
+			for (var count = 1; count <= retryCount; count++)
 			{
 				try
 				{
@@ -38,7 +38,7 @@ namespace Quarks
 				catch (Exception ex)
 				{
 					exceptions.Add(ex);
-					if (retry < retryCount - 1)
+					if (count < retryCount)
 						Thread.Sleep(retryInterval);
 				}
 			}
@@ -46,20 +46,20 @@ namespace Quarks
 			throw new AggregateException(exceptions);
 		}
 
-		public virtual async Task<T> DoAsync<T>(Func<Task<T>> action, TimeSpan retryInterval, int retryCount = 3)
+		public virtual async Task<T> DoAsync<T>(Func<Task<T>> func, TimeSpan retryInterval, int retryCount = 3)
 		{
 			var exceptions = new List<Exception>();
 
-			for (var retry = 0; retry < retryCount; retry++)
+			for (var count = 1; count <= retryCount; count++)
 			{
 				try
 				{
-					return await action();
+					return await func().ConfigureAwait(false);
 				}
 				catch (Exception ex)
 				{
 					exceptions.Add(ex);
-					if (retry < retryCount - 1)
+					if (count < retryCount)
 						Thread.Sleep(retryInterval);
 				}
 			}
