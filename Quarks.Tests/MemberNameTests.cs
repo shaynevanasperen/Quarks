@@ -48,7 +48,7 @@ namespace Quarks.Tests
 	class Test
 	{
 		public string TestProperty { get; set; }
-		public int TestField;
+		public int TestField = 0;
 		public void TestMethod() { }
 	}
 }

@@ -24,6 +24,15 @@ namespace Quarks.Tests
 	[Behaviors]
 	class ReturnsCorrectItemsFromList
 	{
+		// To avoid compiler warnings
+		public ReturnsCorrectItemsFromList()
+		{
+			Subject = null;
+			Source = null;
+			PageNumber = 0;
+			PageSize = 0;
+		}
+
 		It should_return_correct_items_from_the_list = () =>
 		{
 			var items = Source.Skip((PageNumber - 1) * PageSize).Take(PageSize).ToList();
@@ -56,6 +65,7 @@ namespace Quarks.Tests
 		};
 	}
 
+	#pragma warning disable 0169 // For MSpec behaviour fields
 	[Subject(typeof(Page<>))]
 	class When_page_created_with_page_1 : PageTest
 	{
@@ -112,6 +122,7 @@ namespace Quarks.Tests
 			PageNumber = (int)Math.Ceiling(PageConstants.TestNumberOfItems / (double)PageSize);
 		};
 	}
+	#pragma warning restore 0169
 
 	[Subject(typeof(Page<>))]
 	class When_ilist_used_and_total_count_is_less_than_source

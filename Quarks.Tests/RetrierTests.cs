@@ -173,7 +173,7 @@ namespace Quarks.Tests
 
 		static async Task testMethod()
 		{
-			await Task.Run(() => callCount++);
+			await Task.Run(() => callCount++).ConfigureAwait(false);
 		}
 
 		static int callCount;
@@ -199,7 +199,7 @@ namespace Quarks.Tests
 				callCount++;
 				if (callCount < 3)
 					throw new Exception();
-			});
+			}).ConfigureAwait(false);
 		}
 
 		static int callCount;
@@ -226,7 +226,7 @@ namespace Quarks.Tests
 			{
 				callCount++;
 				throw new Exception();
-			});
+			}).ConfigureAwait(false);
 		}
 
 		static int callCount;
@@ -254,7 +254,7 @@ namespace Quarks.Tests
 			{
 				callCount++;
 				return 1;
-			});
+			}).ConfigureAwait(false);
 		}
 
 		static int result;
@@ -285,7 +285,7 @@ namespace Quarks.Tests
 				if (callCount < 3)
 					throw new Exception();
 				return 1;
-			});
+			}).ConfigureAwait(false);
 		}
 
 		static int result;
@@ -310,15 +310,14 @@ namespace Quarks.Tests
 
 		static async Task<int> testMethod()
 		{
-			return await Task.Run(() =>
-			{
-				callCount++;
-				throw new Exception();
-				// ReSharper disable once CSharpWarnings::CS0162
-				//return value required otherwise implicit conversion causes compile error
-				return 1;
-			});
+			return await Task.Run(method).ConfigureAwait(false);
 		}
+
+		static Func<int> method = () =>
+		{
+			callCount++;
+			throw new Exception();
+		};
 
 		static int result;
 		static int callCount;
