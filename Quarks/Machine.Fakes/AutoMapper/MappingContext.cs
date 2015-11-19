@@ -94,11 +94,11 @@ namespace Quarks.Machine.Fakes.AutoMapper
 				Source = The<TSource>();
 
 			if (Destination == default(TDestination))
-				throw new InvalidOperationException(String.Format(
+				throw new InvalidOperationException(string.Format(
 					"Destination of '{0}' must be set for ExistingDestinationMappingContext",
 					typeof(TDestination).Name));
 			if (Destination.GetType().Namespace == "Castle.Proxies")
-				throw new InvalidOperationException(String.Format(
+				throw new InvalidOperationException(string.Format(
 					"Destination of '{0}' cannot be a dynamic proxy for ExistingDestinationMappingContext, have you set Destination or configured The<{0}>?",
 					typeof(TDestination).Name));
 

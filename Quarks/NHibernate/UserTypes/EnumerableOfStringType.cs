@@ -38,7 +38,7 @@ namespace Quarks.NHibernate.UserTypes
 		{
 			return strings == null
 				? null
-				: String.Join(LineSeparator, strings);
+				: string.Join(LineSeparator, strings);
 		}
 	}
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using FluentNHibernate.Conventions;
+﻿using FluentNHibernate.Conventions;
 using FluentNHibernate.Conventions.AcceptanceCriteria;
 using FluentNHibernate.Conventions.Inspections;
 using FluentNHibernate.Conventions.Instances;
@@ -25,7 +24,7 @@ namespace Quarks.FluentNHibernate.Conventions.Reference
 		public void Accept(IAcceptanceCriteria<IManyToOneInspector> criteria)
 		{
 			// Ignore properties that have already been set
-			criteria.Expect(c => String.IsNullOrEmpty(c.PropertyRef));
+			criteria.Expect(c => string.IsNullOrEmpty(c.PropertyRef));
 		}
 	}
 }

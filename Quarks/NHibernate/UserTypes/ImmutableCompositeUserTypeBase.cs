@@ -116,7 +116,7 @@ namespace Quarks.NHibernate.UserTypes
 			}
 			catch (MissingMethodException)
 			{
-				throw new MissingMethodException(String.Format("Since a GetMap Method wasn't provided and a constructor with {0} " +
+				throw new MissingMethodException(string.Format("Since a GetMap Method wasn't provided and a constructor with {0} " +
 												 "args couldn't be found NHibernate couldn't map the returning values" +
 												 "to create a new instance of type '{1}'.", vals.Length, typeof(T)));
 			}

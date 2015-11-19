@@ -25,7 +25,7 @@ namespace Quarks
 		{
 			var sentence = new StringBuilder();
 
-			foreach (var word in source.Where(word => !String.IsNullOrWhiteSpace(word))
+			foreach (var word in source.Where(word => !string.IsNullOrWhiteSpace(word))
 				.Select(word => word.Trim()))
 				appendWordToSentence(sentence, word);
 
