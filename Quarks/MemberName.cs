@@ -14,7 +14,7 @@ namespace Quarks
 		/// <returns>The name of the member</returns>
 		internal static string MemberName<TResult>(Expression<Func<T, TResult>> expression)
 		{
-			return expression.GetMemberName();
+			return expression.Get();
 		}
 
 		/// <summary>
@@ -24,7 +24,7 @@ namespace Quarks
 		/// <returns>The name of the member</returns>
 		internal static string MemberName(Expression<Action<T>> expression)
 		{
-			return expression.GetMemberName();
+			return expression.Get();
 		}
 	}
 
@@ -40,7 +40,7 @@ namespace Quarks
 		/// <returns>The name of the member</returns>
 		internal static string MemberName<T, TResult>(this T instance, Expression<Func<T, TResult>> expression) where T : class
 		{
-			return expression.GetMemberName();
+			return expression.Get();
 		}
 
 		/// <summary>
@@ -52,19 +52,19 @@ namespace Quarks
 		/// <returns>The name of the member</returns>
 		internal static string MemberName<T>(this T instance, Expression<Action<T>> expression) where T : class
 		{
-			return expression.GetMemberName();
+			return expression.Get();
 		}
 	}
 
 	internal static class MemberName
 	{
-		internal static string GetMemberName<T, TResult>(this Expression<Func<T, TResult>> expression)
+		internal static string Get<T, TResult>(this Expression<Func<T, TResult>> expression)
 			where T : class
 		{
 			return getMemberName(expression.Body);
 		}
 
-		internal static string GetMemberName<T>(this Expression<Action<T>> expression)
+		internal static string Get<T>(this Expression<Action<T>> expression)
 		{
 			return getMemberName(expression);
 		}
