@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Quarks.EntityFramework.Conventions.StoreModel.RemoveUnderscoreFromDefaultForeignKeyNames</id>
+		<version>1.0.0</version>
+		<authors>Shayne van Asperen</authors>
+		<owners>Shayne van Asperen</owners>
+		<licenseUrl>https://github.com/shaynevanasperen/Quarks/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>An IStoreModelConvention which removes the underscore from default foreign key names</description>
+		<language>en-US</language>
+		<tags>quarks entity framework convention storemodel remove underscore default foreign key name</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+	<files>
+		<file src="RemoveUnderscoreFromDefaultForeignKeyNames.cs" target="content\Quarks\EntityFramework\Conventions\StoreModel" />
+	</files>
+</package>
