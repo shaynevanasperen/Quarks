@@ -197,8 +197,6 @@
     <Compile Include="Machine.Fakes\System.Web.Mvc\ConfigForAnHttpRequest.cs" />
     <Compile Include="MemberName.cs" />
     <Compile Include="NameValueCollectionExtensions\ToDictionary.cs" />
-    <Compile Include="NHibernate.Sessions\FluentNHibernate.cs" />
-    <Compile Include="NHibernate.Sessions\Types.cs" />
     <Compile Include="NHibernate\ISessionExtensions\ConfigureAsReadOnly.cs" />
     <Compile Include="NHibernate\ISessionExtensions\Transactionally.cs" />
     <Compile Include="NHibernate\ISessionFactoryExtensions\GetCurrentOrNewSession.cs" />
@@ -450,12 +448,6 @@
     </None>
     <None Include="NameValueCollectionExtensions\ToDictionary.nuspec">
       <DependentUpon>ToDictionary.cs</DependentUpon>
-    </None>
-    <None Include="NHibernate.Sessions\FluentNHibernate.nuspec">
-      <DependentUpon>FluentNHibernate.cs</DependentUpon>
-    </None>
-    <None Include="NHibernate.Sessions\Types.nuspec">
-      <DependentUpon>Types.cs</DependentUpon>
     </None>
     <None Include="NHibernate\ISessionExtensions\ConfigureAsReadOnly.nuspec">
       <DependentUpon>ConfigureAsReadOnly.cs</DependentUpon>
