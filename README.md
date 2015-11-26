@@ -1,3 +1,4 @@
+<img src="Quarks.png" align="right" />
 [![Build status](https://ci.appveyor.com/api/projects/status/hqd84ecsmds7l0cx?svg=true)](https://ci.appveyor.com/project/shaynevanasperen/quarks)
 Quarks
 ======
