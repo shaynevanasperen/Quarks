@@ -17,4 +17,4 @@ task PackRecentlyModified {
 	Pack-Nuspecs (Get-Date).AddDays(-1)
 }
 
-task . Clean, Compile, Test, PackRecentlyModified, Push
+task . Clean, Compile, MSpec, PackRecentlyModified, Push
