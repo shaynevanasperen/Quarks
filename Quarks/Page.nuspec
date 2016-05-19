@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>A simple implementation of IReadOnlyList&lt;T&gt; representing a page in a collection</description>
+		<description>A simple implementation of generic IReadOnlyList representing a page in a collection</description>
 		<language>en-US</language>
 		<tags>quarks iqueryable ireadonlycolletion ienumerable ipagination ipage page</tags>
 		<developmentDependency>true</developmentDependency>

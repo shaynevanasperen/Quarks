@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>A Machine.Fakes context configuration which simplifies testing of AutoMapper ValueResolver&lt;TSource, TDestination&gt; classes</description>
+		<description>A Machine.Fakes context configuration which simplifies testing of AutoMapper generic ValueResolver classes</description>
 		<language>en-US</language>
 		<tags>quarks automapper valueresolver mock machine specifications fakes</tags>
 		<developmentDependency>true</developmentDependency>

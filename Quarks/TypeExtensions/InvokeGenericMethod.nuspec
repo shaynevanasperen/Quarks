@@ -9,10 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
-			A Type extension which allows the invocation of a generic method specifying the generic type at runtime.
-			eg. If a method's signature is: void MyMethod&lt;T&gt;() you can use InvokeGenericMethod(instance, runtimeType, "MyMethod") to invoke it with any type.
-		</description>
+		<description>A Type extension which allows the invocation of a generic method specifying the generic type at runtime</description>
 		<language>en-US</language>
 		<tags>quarks extension type invoke generic method</tags>
 		<developmentDependency>true</developmentDependency>
