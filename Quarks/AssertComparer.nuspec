@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>A comparer for asserting equality of objects, including generic types, IEnumerable, IComparable&lt;T&gt; and IEquatable&lt;T&gt;</description>
+		<description>A comparer for asserting equality of objects, including generic types, IEnumerable, generic IComparable and generic IEquatable</description>
 		<language>en-US</language>
 		<tags>quarks assert comparer</tags>
 		<developmentDependency>true</developmentDependency>

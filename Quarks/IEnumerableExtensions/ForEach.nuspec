@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Extends the IEnumerable&lt;T&gt; interface to include a ForEach method</description>
+		<description>Extends the generic IEnumerable interface to include a ForEach method</description>
 		<language>en-US</language>
 		<tags>quarks ienumerable foreach</tags>
 		<developmentDependency>true</developmentDependency>

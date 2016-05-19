@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Extends the IDictionary&lt;TKey, TValue&gt; interface to include a GetValueOrDefault method</description>
+		<description>Extends the generic IDictionary interface to include a GetValueOrDefault method</description>
 		<language>en-US</language>
 		<tags>quarks idictionary default getvalueordefault</tags>
 		<developmentDependency>true</developmentDependency>

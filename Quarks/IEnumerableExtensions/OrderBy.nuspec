@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Extends the IEnumerable&lt;T&gt; interface to enable ordering by a dynamic property</description>
+		<description>Extends the generic IEnumerable interface to enable ordering by a dynamic property</description>
 		<language>en-US</language>
 		<tags>quarks ienumerable orderby dynamic property</tags>
 		<developmentDependency>true</developmentDependency>

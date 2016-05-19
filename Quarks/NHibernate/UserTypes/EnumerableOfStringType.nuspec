@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/shaynevanasperen/Quarks</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/shaynevanasperen/Quarks/master/Quarks.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>An IUserType for IEnumerable&lt;string&gt;</description>
+		<description>An IUserType for generic IEnumerable</description>
 		<language>en-US</language>
 		<tags>quarks nhibernate user type byte</tags>
 		<developmentDependency>true</developmentDependency>
