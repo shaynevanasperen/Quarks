@@ -1,4 +1,5 @@
 <img src="Quarks.png" align="right" />
+
 [![Build status](https://ci.appveyor.com/api/projects/status/hqd84ecsmds7l0cx?svg=true)](https://ci.appveyor.com/project/shaynevanasperen/quarks)
 Quarks
 ======
@@ -121,16 +122,3 @@ when the package was installed. These modifications will persist when a NuGet pa
 happens, but when updating the package these changes will be overwritten (after accepting a prompt
 to do so). In that case, a user can then merge their changes into the new code (if they are still
 relevant).
-
-## NuGet 3.1 deprecated support for delivering elements in the `/content` folder of packages
-Starting with NuGet 3.1 when using `project.json`, [support for delivering elements in the /content folder of packages has been deprecated](http://blog.nuget.org/20150729/Introducing-nuget-uwp.html).
-Unfortunately this means that currently, Quarks packages won't work out-of-the-box for projects based
-on the new `project.json` format. However according to [this blog post](https://docs.nuget.org/Consume/ProjectJson-Intro),
-"Content files can still be carried inside the packages, and will be ignored currently, however the end
-user can still copy them into the right spot.", so this method can be used as a temporary measure for
-projects based on the new `project.json` format.
-
-There's an [issue](https://github.com/NuGet/Home/issues/627) currently being discussed that proposes
-to bring back support for content files. I'll be watching this issue closely to see if and when it
-gets implemented. If however it doesn't get implemented, I'll be looking into migrating this suite of
-packages to [Bower](http://bower.io/).
